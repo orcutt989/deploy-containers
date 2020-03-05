@@ -1,6 +1,6 @@
 ---
 - name: Install python if needed for Ansible
-  import_playbook: bootstrap.yml
+  import_playbook: install_python.yml
 - hosts: all
   gather_facts: false
   become: yes
