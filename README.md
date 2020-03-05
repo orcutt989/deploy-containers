@@ -1,6 +1,9 @@
 # deploy-containers
 An exercise showing different ways to deploy a container to a host.
 
+## Prerequisits
+1. Ansible assumes all of your local keys
+
 ## With Ansible
 1. Clone this repository
 2. Install Ansible on your deployment machine
