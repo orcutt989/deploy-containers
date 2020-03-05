@@ -2,7 +2,7 @@
 An exercise showing different ways to deploy a container to a host.
 
 ## With Ansible
-Ansible is a great configuration management tool that is simple and does not require an agent to apply a state. Other tools may be more powerful, but Ansible was chosen for its simplicity.
+Ansible is a great configuration management tool that is simple and does not require an agent to apply a state. However, it does require Python.  Other tools may be more powerful, but Ansible was chosen for its simplicity.
 
 ### What this code could do
 These Ansible playbooks will -
