@@ -1,8 +1,8 @@
 # deploy-containers
 An exercise showing different ways to deploy a container to a host.
 
-## Prerequisits
-1. Ansible assumes all of your local keys
+## Prerequisites
+1. Ansible [assumes](https://docs.ansible.com/ansible/latest/user_guide/connection_details.html#ssh-key-setup) you have an `ssh-agent` running with all of your SSH keys for your hosts in it.
 
 ## With Ansible
 1. Clone this repository
