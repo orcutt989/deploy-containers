@@ -2,6 +2,7 @@
 An exercise showing different ways to deploy a container to a host.
 
 ## With Ansible
+Ansible is a great configuration management tool that is simple and does not require an agent to 
 
 ### What this code could do
 These Ansible playbooks will -
@@ -9,6 +10,8 @@ These Ansible playbooks will -
 1. Install **pip** if not already installed on target system/s.
 1. Install the **docker pip package** if not already installed on target system/s
 1. Install the **docker container runtime** if not already installed on the target system/s.
+1. Download, build, and run a container from DockerHub.
+1. Expose port **4567** on all target systems.
 
 ### Prerequisites
 1. Ansible [assumes](https://docs.ansible.com/ansible/latest/user_guide/connection_details.html#ssh-key-setup) you have an `ssh-agent` running with all of your SSH keys for your hosts in it.
