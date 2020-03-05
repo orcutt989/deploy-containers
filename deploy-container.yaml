@@ -35,12 +35,6 @@
       raw: curl https://get.docker.com/ | bash
       when: check_docker.rc != 0
 
-#    - name: Build Docker image from Dockerhub
-#      docker_image:
-#        name: roottjnii/interview-container:201805
-#        source: pull
-#        state: build
-
     - name: Run docker image with options
       docker_container:
         name: app
