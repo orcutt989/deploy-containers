@@ -1,2 +1,36 @@
 ---
 - import_playbook: bootstrap.yml
+  hosts: all
+  gather_facts: false
+  become: yes
+  tasks:
+    - name: Check for pip
+      raw: test -e /usr/bin/pip
+      changed_when: false
+      failed_when: false
+      register: check_pip
+
+    - name: Install pip
+      apt: name=python-pip state=present
+      when: check_pip.rc != 0
+
+    - name: Check for docker-py
+      raw: python -c "import docker-py"
+      changed_when: false
+      failed_when: false
+      register: check_docker-py
+
+    - name: install docker-py package
+      pip: name=docker-py
+      when: check_docker-py.rc != 0
+
+    - name: Build Docker image from Dockerhub
+      docker_image:
+        name: roottjnii/interview-container:201805
+        source: pull
+        state: build
+
+    - name: Run docker image with options
+      docker_container:
+        
+        
