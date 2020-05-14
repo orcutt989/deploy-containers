@@ -100,7 +100,7 @@ These Ansible playbooks will -
 3. Add the IPs of your target systems to receive the containers in `/etc/ansible/hosts`
 4. Run the Ansible playbook to deploy the container to your hosts with the following command - 
 
-    `ansible-playbook deploy-container.yaml`
+    `ansible-playbook deploy-container.yml`
 5. Check that the API is working from the web app from outside the system. (If using AWS or a cloud provider the  instance's security group will need to be updated to allow incoming TCP traffic from all IPs on port 4567.)
 
     `curl ip.of.server:4567`
